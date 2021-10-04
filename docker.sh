@@ -19,8 +19,7 @@ sudo dnf remove -y docker \
   docker-logrotate \
   docker-selinux \
   docker-engine-selinux \
-  docker-engine \
-  docker-compose
+  docker-engine
 
 message 'Adding Docker repositories to local list'
 sudo dnf -y install dnf-plugins-core
@@ -31,7 +30,8 @@ sudo dnf config-manager \
 message 'Installing Docker on the machine'
 sudo dnf install -y docker-ce \
   docker-ce-cli \
-  containerd.io
+  containerd.io \
+  docker-compose
 
 message 'Starting Docker services'
 sudo systemctl enable --now docker
