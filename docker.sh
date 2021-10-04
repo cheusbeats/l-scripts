@@ -10,7 +10,7 @@ function message() {
 }
 
 message 'Removing old Docker instances'
-sudo dnf remove docker \
+sudo dnf remove -y docker \
   docker-client \
   docker-client-latest \
   docker-common \
