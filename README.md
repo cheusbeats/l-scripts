@@ -5,4 +5,5 @@ Select a script by name and see first 4 lines. These 4 lines of comments is desc
 ---
 
 List of linux scripts:
-* `docker.sh` - linux script for installing docker on machine
+* `docker.sh` - linux script for installing [docker](https://www.docker.com/) on machine
+* `neovim.sh` - script for configuring [NeoVim](https://neovim.io/)
