@@ -19,7 +19,8 @@ sudo dnf remove -y docker \
   docker-logrotate \
   docker-selinux \
   docker-engine-selinux \
-  docker-engine
+  docker-engine \
+  docker-compose
 
 message 'Adding Docker repositories to local list'
 sudo dnf -y install dnf-plugins-core
