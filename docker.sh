@@ -5,33 +5,40 @@
 
 # Function for output messages
 function message() {
-	# Green bold text
-	echo -e '\033[1;32m'$1'\033[0m'
+  # Green bold text
+  echo -e '\033[1;32m'$1'\033[0m'
 }
 
 message 'Removing old Docker instances'
-sudo dnf remove -y docker \
-  docker-client \
-  docker-client-latest \
-  docker-common \
-  docker-latest \
-  docker-latest-logrotate \
-  docker-logrotate \
-  docker-selinux \
-  docker-engine-selinux \
-  docker-engine
+sudo apt remove -y docker \
+  docker-engine \
+  docker.io \
+  containerd \
+  runc
 
 message 'Adding Docker repositories to local list'
-sudo dnf -y install dnf-plugins-core
-sudo dnf config-manager \
-  --add-repo \
-  https://download.docker.com/linux/fedora/docker-ce.repo
+sudo apt update
+sudo apt install -y apt-transport-https \
+  ca-certificates \
+  curl \
+  gnupg \
+  lsb-release
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 message 'Installing Docker on the machine'
-sudo dnf install -y docker-ce \
+sudo apt-get update
+sudo apt-get install -y docker-ce \
   docker-ce-cli \
-  containerd.io \
-  docker-compose
+  containerd.io
 
 message 'Starting Docker services'
 sudo systemctl enable --now docker
+
+message 'Post-installation steps'
+sudo groupadd docker # Adding new group
+sudo usermod -aG docker $USER # Adding current user to the group
+newgrp docker # Activate privileges
