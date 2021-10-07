@@ -35,3 +35,8 @@ sudo dnf install -y docker-ce \
 
 message 'Starting Docker services'
 sudo systemctl enable --now docker
+
+message 'Post-installation steps'
+sudo groupadd docker # Adding new group
+sudo usermod -aG docker $USER # Adding current user to the group
+newgrp docker # Activate privileges
