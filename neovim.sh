@@ -12,12 +12,13 @@ function message() {
 # Installing vim-plug
 message 'Installing vim-plug'
 if [ ! -f '"${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim' ]; then
+  sudo apt install curl
 	sh -c 'curl -sSfLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 fi
 
 
 message 'Installing some packages for vim-plug'
-sudo dnf install -y fzf nodejs npm python3-neovim
+sudo apt install -y fzf nodejs npm python3-neovim neovim
 # Writing configuration into $HOME/config/nvim/init.vim
 message 'Writing some configuration in $HOME/config/nvim/init.vim'
 mkdir -p $HOME/.config/nvim
@@ -34,12 +35,12 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 	" Some language support
 	Plug 'sheerun/vim-polyglot'
-	" One dark theme
-	Plug 'joshdick/onedark.vim'
+	" New moon theme
+	Plug 'taniarascia/new-moon.vim'
 call plug#end()
 
 " # Colorscheme
-silent! colorscheme onedark
+silent! colorscheme new-moon
 
 " # Numberline
 " Numberline width
