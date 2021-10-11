@@ -37,6 +37,10 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'sheerun/vim-polyglot'
 	" New moon theme
 	Plug 'taniarascia/new-moon.vim'
+	" Double quotes plugin
+	Plug 'jiangmiao/auto-pairs'
+	" Rainbow parenthesis
+	Plug 'junegunn/rainbow_parentheses.vim'
 call plug#end()
 
 " # Colorscheme
@@ -69,8 +73,6 @@ set foldlevelstart=10
 set foldnestmax=10
 " Folding method (based on syntax)
 set foldmethod=syntax
-" Show matched brackets
-set showmatch
 
 " # Tabs
 " Number of visual spaces per tab
