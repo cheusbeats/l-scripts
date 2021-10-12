@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Author: Daniil Shilo (daniilshilo-developer) <daniilshilo.developer@gmail.com>
-# Description: Installs vim extensions
-# Destination: This script will install required extensions for NeoVim (like plug.vim) and write some configuration in .vimrc
+# Description: Installs compass chat app
+# Destination: This script will download Compass from site, unpackage it into /opt/, create desktop-file and move icon from site into /opt/Compass
 
 # Function for output messages
 function message() {
