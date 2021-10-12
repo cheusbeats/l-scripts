@@ -96,3 +96,6 @@ EOF
 message 'Installing plugins'
 nvim --headless +PlugInstall +qa
 nvim --headless +'CocInstall -sync coc-json coc-htmlhint coc-css coc-emmet coc-yaml coc-snippets coc-tailwindcss coc-tsserver coc-sh' +qa
+
+# Post-installation steps
+cat "alias -g vim=nvim" >> $HOME/.bashrc
