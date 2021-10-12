@@ -14,3 +14,4 @@ List of linux scripts:
 * `sf-mono-install.sh` - install [San Francisco Mono](https://developer.apple.com/fonts/) font
 * `swap-escape-and-capslock.sh` - swap Escape and CapsLock keys
 * `terminal-colorscheme-kasugano.sh` - set new theme for Gnome Terminal in Fedora
+* `sudo-password-remove.sh` - remove password checking for current user
