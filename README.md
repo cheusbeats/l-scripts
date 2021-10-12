@@ -15,3 +15,5 @@ List of linux scripts:
 * `swap-escape-and-capslock.sh` - swap Escape and CapsLock keys
 * `terminal-colorscheme-kasugano.sh` - set new theme for Gnome Terminal in Fedora
 * `sudo-password-remove.sh` - remove password checking for current user
+* `vscode.sh` - install VSCode
+* `sublime-text.sh` - install Sublime Text
