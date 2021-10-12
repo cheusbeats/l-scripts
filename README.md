@@ -17,3 +17,4 @@ List of linux scripts:
 * `sudo-password-remove.sh` - remove password checking for current user
 * `vscode.sh` - install [VSCode](https://code.visualstudio.com/)
 * `sublime-text.sh` - install [Sublime Text](https://www.sublimetext.com/)
+* `sublime-merge.sh` - install [Sublime Merge](https://www.sublimemerge.com/)
