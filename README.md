@@ -18,3 +18,5 @@ List of linux scripts:
 * `vscode.sh` - install [VSCode](https://code.visualstudio.com/)
 * `sublime-text.sh` - install [Sublime Text](https://www.sublimetext.com/)
 * `sublime-merge.sh` - install [Sublime Merge](https://www.sublimemerge.com/)
+* `oh-my-fish` - install [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) with fish shell
+* `oh-my-zsh` - install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) with zsh shell
